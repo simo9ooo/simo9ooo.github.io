@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toronto Fertility Resources</title>
+    <meta name="description" content="Comprehensive fertility resources for Toronto residents. Find trusted fertility clinics, IVF information, OHIP coverage details, and support services in the Greater Toronto Area.">
+    <meta name="keywords" content="Toronto fertility clinic, IVF Toronto, fertility treatment Ontario, OHIP fertility coverage, fertility support Toronto">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Toronto Fertility Resources - Your Guide to Fertility Care">
+    <meta property="og:description" content="Connect with trusted fertility clinics, treatment information, and support services in Toronto and the GTA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://torontofertilityclinic.com">
+    
+    <title>Toronto Fertility Resources - Clinics, Support & Treatment Information</title>
+    
     <style>
         * {
             margin: 0;
@@ -15,18 +25,17 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 20px;
+            line-height: 1.6;
         }
         
         .container {
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 700px;
+            max-width: 900px;
             width: 100%;
+            margin: 0 auto;
             padding: 50px 40px;
         }
         
@@ -38,12 +47,29 @@
         .logo {
             font-size: 60px;
             margin-bottom: 20px;
+            role: img;
+            aria-label: "Baby icon";
         }
         
         h1 {
             color: #2d3748;
             font-size: 32px;
             margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        h2 {
+            color: #2d3748;
+            font-size: 24px;
+            margin: 35px 0 20px 0;
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: #2d3748;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
         
         .subtitle {
@@ -64,6 +90,29 @@
             color: #4a5568;
             font-size: 15px;
             line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .highlight-box {
+            background: #fff5f5;
+            border-left: 4px solid #f5576c;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        
+        .highlight-box h3 {
+            color: #c53030;
+            margin-top: 0;
+        }
+        
+        .highlight-box p {
+            color: #4a5568;
+            font-size: 15px;
         }
         
         .resources {
@@ -88,6 +137,11 @@
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         }
         
+        .resource-card:focus {
+            outline: 3px solid #ffd700;
+            outline-offset: 2px;
+        }
+        
         .resource-icon {
             font-size: 32px;
             margin-bottom: 10px;
@@ -104,17 +158,50 @@
             opacity: 0.9;
         }
         
+        .toronto-clinics {
+            background: #edf2f7;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .clinic-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .clinic-list li {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            color: #2d3748;
+            font-size: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .clinic-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .clinic-name {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
         .cta-section {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
             padding: 30px;
             border-radius: 12px;
             text-align: center;
+            margin-bottom: 30px;
         }
         
         .cta-section h3 {
             font-size: 22px;
             margin-bottom: 15px;
+            color: white;
         }
         
         .cta-btn {
@@ -135,7 +222,40 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
         
-        @media (max-width: 480px) {
+        .cta-btn:focus {
+            outline: 3px solid #ffd700;
+            outline-offset: 2px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 30px;
+        }
+        
+        .footer p {
+            color: #718096;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            margin-top: 15px;
+        }
+        
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 13px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
             .container {
                 padding: 40px 25px;
             }
@@ -143,51 +263,101 @@
             h1 {
                 font-size: 26px;
             }
+            
+            h2 {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="logo">👶</div>
+        <header class="header">
+            <div class="logo" role="img" aria-label="Baby icon">👶</div>
             <h1>Toronto Fertility Resources</h1>
-            <p class="subtitle">Connecting you with trusted fertility information and services</p>
-        </div>
+            <p class="subtitle">Comprehensive fertility care information and support services in the Greater Toronto Area</p>
+        </header>
         
-        <div class="info-box">
-            <p>
-                <strong>Looking for fertility support in Toronto?</strong><br>
-                Access comprehensive resources, clinic directories, and expert guidance for your fertility journey.
-            </p>
-        </div>
-        
-        <div class="resources">
-            <a href="https://www.fertilityanswers.com/find-a-fertility-clinic/" class="resource-card" target="_blank" rel="noopener">
-                <div class="resource-icon">🏥</div>
-                <div class="resource-title">Find Fertility Clinics</div>
-                <div class="resource-desc">Search trusted fertility clinics in Toronto and across Canada</div>
-            </a>
+        <main>
+            <div class="info-box">
+                <p>
+                    <strong>Starting your fertility journey in Toronto?</strong><br>
+                    Whether you're exploring your options, seeking treatment, or looking for support, you'll find trusted resources, clinic information, and guidance for every step of your path to parenthood.
+                </p>
+            </div>
             
-            <a href="https://www.fertilityiq.com" class="resource-card" target="_blank" rel="noopener">
-                <div class="resource-icon">📚</div>
-                <div class="resource-title">Fertility Education</div>
-                <div class="resource-desc">Learn about IVF, treatments, and fertility options</div>
-            </a>
+            <div class="highlight-box">
+                <h3>🏥 OHIP Fertility Coverage in Ontario</h3>
+                <p>Ontario residents may be eligible for one funded cycle of IVF through OHIP. Coverage includes women under 43 years old and requires a referral from a physician. Additional cycles and certain medications may require out-of-pocket payment or private insurance.</p>
+            </div>
             
-            <a href="https://www.resolve.org" class="resource-card" target="_blank" rel="noopener">
-                <div class="resource-icon">💬</div>
-                <div class="resource-title">Support Community</div>
-                <div class="resource-desc">Connect with others on their fertility journey</div>
-            </a>
-        </div>
+            <section aria-labelledby="clinics-heading">
+                <h2 id="clinics-heading">Major Fertility Clinics in Toronto & GTA</h2>
+                <div class="toronto-clinics">
+                    <ul class="clinic-list">
+                        <li><span class="clinic-name">Toronto Fertility Institute</span> - Downtown Toronto</li>
+                        <li><span class="clinic-name">TRIO Fertility</span> - Multiple GTA locations</li>
+                        <li><span class="clinic-name">ReproMed Fertility</span> - North York & Vaughan</li>
+                        <li><span class="clinic-name">CReATe Fertility Centre</span> - Midtown Toronto</li>
+                        <li><span class="clinic-name">Mount Sinai Fertility</span> - University Health Network</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section aria-labelledby="resources-heading">
+                <h2 id="resources-heading">Essential Fertility Resources</h2>
+                <div class="resources">
+                    <a href="https://www.fertilityanswers.com/find-a-fertility-clinic/" class="resource-card" target="_blank" rel="noopener noreferrer" aria-label="Find fertility clinics in Canada">
+                        <div class="resource-icon">🏥</div>
+                        <div class="resource-title">Find Fertility Clinics</div>
+                        <div class="resource-desc">Search accredited fertility clinics across Toronto and Canada with detailed profiles and success rates</div>
+                    </a>
+                    
+                    <a href="https://www.fertilityiq.com" class="resource-card" target="_blank" rel="noopener noreferrer" aria-label="Fertility education and treatment information">
+                        <div class="resource-icon">📚</div>
+                        <div class="resource-title">Fertility Education</div>
+                        <div class="resource-desc">Comprehensive guides on IVF, IUI, egg freezing, and treatment options with expert insights</div>
+                    </a>
+                    
+                    <a href="https://www.resolve.org" class="resource-card" target="_blank" rel="noopener noreferrer" aria-label="Fertility support community">
+                        <div class="resource-icon">💬</div>
+                        <div class="resource-title">Support Community</div>
+                        <div class="resource-desc">Connect with others on their fertility journey through support groups and online forums</div>
+                    </a>
+                    
+                    <a href="https://www.ontario.ca/page/get-fertility-treatments" class="resource-card" target="_blank" rel="noopener noreferrer" aria-label="Ontario fertility treatment information">
+                        <div class="resource-icon">📋</div>
+                        <div class="resource-title">Ontario Government Resources</div>
+                        <div class="resource-desc">Official information about OHIP-funded fertility treatments and eligibility requirements</div>
+                    </a>
+                </div>
+            </section>
+            
+            <div class="cta-section">
+                <h3>Need Financial Assistance?</h3>
+                <p style="margin-bottom: 20px; font-size: 15px;">Explore financing options and payment plans for fertility treatments</p>
+                <a href="https://www.futurefertility.com/fertility-treatment-financing" class="cta-btn" target="_blank" rel="noopener noreferrer" aria-label="View fertility treatment financing options">
+                    View Financing Options
+                </a>
+            </div>
+            
+            <div class="info-box">
+                <p>
+                    <strong>Next Steps:</strong><br>
+                    Schedule a consultation with a fertility specialist to discuss your specific situation. Most clinics offer initial consultations to review your medical history, discuss treatment options, and create a personalized plan.
+                </p>
+            </div>
+        </main>
         
-        <div class="cta-section">
-            <h3>Need Financial Assistance?</h3>
-            <p style="margin-bottom: 20px; font-size: 15px;">Explore financing options for fertility treatments</p>
-            <a href="https://www.futurefertility.com/fertility-treatment-financing" class="cta-btn" target="_blank" rel="noopener">
-                View Financing Options
-            </a>
-        </div>
+        <footer class="footer">
+            <p><strong>Disclaimer:</strong> This website provides general information and resources. Always consult with qualified healthcare professionals for medical advice specific to your situation.</p>
+            <div class="footer-links">
+                <a href="mailto:info@torontofertilityclinic.com">Contact</a>
+                <a href="#" onclick="alert('Privacy policy page would be linked here'); return false;">Privacy Policy</a>
+                <a href="#" onclick="alert('Terms of service page would be linked here'); return false;">Terms</a>
+            </div>
+            <p style="margin-top: 15px;">© 2024 Toronto Fertility Resources. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
