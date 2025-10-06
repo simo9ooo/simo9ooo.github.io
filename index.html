@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toronto Fertility Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 700px;
+            width: 100%;
+            padding: 50px 40px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #2d3748;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            color: #718096;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .info-box {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 35px;
+        }
+        
+        .info-box p {
+            color: #4a5568;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        .resources {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .resource-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .resource-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .resource-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .resource-desc {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .cta-section h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #f5576c;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 25px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">👶</div>
+            <h1>Toronto Fertility Resources</h1>
+            <p class="subtitle">Connecting you with trusted fertility information and services</p>
+        </div>
+        
+        <div class="info-box">
+            <p>
+                <strong>Looking for fertility support in Toronto?</strong><br>
+                Access comprehensive resources, clinic directories, and expert guidance for your fertility journey.
+            </p>
+        </div>
+        
+        <div class="resources">
+            <a href="https://www.fertilityanswers.com/find-a-fertility-clinic/" class="resource-card" target="_blank" rel="noopener">
+                <div class="resource-icon">🏥</div>
+                <div class="resource-title">Find Fertility Clinics</div>
+                <div class="resource-desc">Search trusted fertility clinics in Toronto and across Canada</div>
+            </a>
+            
+            <a href="https://www.fertilityiq.com" class="resource-card" target="_blank" rel="noopener">
+                <div class="resource-icon">📚</div>
+                <div class="resource-title">Fertility Education</div>
+                <div class="resource-desc">Learn about IVF, treatments, and fertility options</div>
+            </a>
+            
+            <a href="https://www.resolve.org" class="resource-card" target="_blank" rel="noopener">
+                <div class="resource-icon">💬</div>
+                <div class="resource-title">Support Community</div>
+                <div class="resource-desc">Connect with others on their fertility journey</div>
+            </a>
+        </div>
+        
+        <div class="cta-section">
+            <h3>Need Financial Assistance?</h3>
+            <p style="margin-bottom: 20px; font-size: 15px;">Explore financing options for fertility treatments</p>
+            <a href="https://www.futurefertility.com/fertility-treatment-financing" class="cta-btn" target="_blank" rel="noopener">
+                View Financing Options
+            </a>
+        </div>
+    </div>
+</body>
+</html>
